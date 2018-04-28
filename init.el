@@ -37,6 +37,7 @@ values."
      yaml
      html
      (ruby :variables ruby-version-manager 'rvm)
+     ruby-on-rails
      themes-megapack
      cucumber
      ;; ----------------------------------------------------------------
@@ -47,9 +48,11 @@ values."
      helm
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-sort-by-usage t
                       ) 
      better-defaults
      emacs-lisp
+     games
      git
      github
      (markdown :variables markdown-live-preview-engine 'vmd)
@@ -327,6 +330,11 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (spacemacs/declare-prefix "o" "my key bindings")
   (spacemacs/set-leader-keys "o f" 'helm-semantic-or-imenu)
+  (spacemacs/set-leader-keys "o s" 'yas-describe-tables)
+
+  (global-company-mode)
+  (linum-relative-mode)
+
   (use-package magithub
     :after magit
     :config (magithub-feature-autoinject t))
