@@ -478,10 +478,12 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (spacemacs/declare-prefix "o" "my key bindings")
+  (spacemacs/declare-prefix "o" "personal bindings")
   (spacemacs/set-leader-keys "o f" 'helm-semantic-or-imenu)
   (spacemacs/set-leader-keys "o s" 'yas-describe-tables)
   (spacemacs/set-leader-keys "o r" 'query-replace)
+  (spacemacs/declare-prefix "o a" "agenda")
+  (spacemacs/set-leader-keys "o a m" 'org-agenda-month-view)
 
   (global-company-mode)
 
@@ -491,7 +493,9 @@ before packages are loaded."
     git-magit-status-fullscreen t
     ruby-indent-level 2
     powerline-default-separator 'bar
+    org-agenda-files (list "~/Projects/icostan.github.io/TODOs.org" "~/Projects/deribit-api-ruby/TODOs.org" "~/Projects/spacemacs.d/TODOs.org" "~/Projects/bitmex-api-ruby/TODOs.org" "~/Projects/cryptos-ruby/TODOs.org")
     )
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
