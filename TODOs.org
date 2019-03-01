@@ -1,15 +1,18 @@
 #+SEQ_TODO: NEXT(n) TODO(t) WAITING(w) | DONE(d) CANCELED(c)
 #+TAGS: PHONE(o) COMPUTER(c) TABLET(t) SPACEMACS(s)
 
-* Issues                                                          :SPACEMACS:
-** modeline symbols for rubocop and rubyref
+* Bugs
+** modeline: use symbols for rubocop/rubyref
 ** cleanup old projects from projectile history
 ** use per project org-todos file instead of tags
+** ruby-mode: snippets for rspec/minitest
 * Tasks                                                           :SPACEMACS:
-** Learn spacemacs [1/5]
+** Learn spacemacs [2/2]
    SCHEDULED: <2019-01-08 Tue +1w>
 *** DONE Learn spacemacs: org-agenda
     CLOSED: [2019-01-08 Tue] SCHEDULED: <2019-01-08 Tue>
-*** TODO Learn spacemacs: org-present
-*** TODO Learn spacemacs: org-capture
-*** TODO Learn spacemacs: org-mode
+*** Learn spacemacs: org-present
+*** Learn spacemacs: org-capture
+*** Learn spacemacs: org-mode
+*** DONE anatomy of a layer
+    CLOSED: [2019-03-01 Fri] SCHEDULED: <2019-03-01 Fri>
