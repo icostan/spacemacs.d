@@ -211,11 +211,11 @@ It should only modify the values of Spacemacs settings."
    ;; `recents' `bookmarks' `projects' `agenda' `todos'.
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   dotspacemacs-startup-lists '((recents . 5)
-                                 ;; (hackernews . 5)
-                                 (projects . 5)
-                                 (todos . 10)
-                                 (agenda . 10))
+    dotspacemacs-startup-lists '((projects . 5)
+                                  (agenda . 10)
+                                  ;; (recents . 5)
+                                  ;; (hackernews . 5)
+                                  (todos . 5))
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
@@ -519,9 +519,10 @@ before packages are loaded."
     git-magit-status-fullscreen t
     ruby-indent-level 2
     powerline-default-separator 'bar
-    org-agenda-files (list "~/Projects/icostan.github.io/TODOs.org" "~/Projects/deribit-api-ruby/TODOs.org" "~/Projects/spacemacs.d/TODOs.org" "~/Projects/bitmex-api-ruby/TODOs.org" "~/Projects/cryptos-ruby/TODOs.org" "~/Projects/ledger.d/TODOs.org")
+    ;; org-mode
+    org-agenda-files (directory-files-recursively "~/Projects" "TODOs\\.org")
+    org-confirm-babel-evaluate nil
     )
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
