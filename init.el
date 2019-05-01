@@ -507,6 +507,7 @@ before packages are loaded."
   (spacemacs/set-leader-keys "o f" 'helm-semantic-or-imenu)
   (spacemacs/set-leader-keys "o s" 'yas-describe-tables)
   (spacemacs/set-leader-keys "o r" 'query-replace)
+  (spacemacs/set-leader-keys "o c" 'org-id-copy)
   (spacemacs/declare-prefix "o a" "agenda")
   (spacemacs/set-leader-keys "o a m" 'org-agenda-month-view)
 
@@ -522,6 +523,8 @@ before packages are loaded."
     ;; org-mode
     org-agenda-files (directory-files-recursively "~/Projects" "TODOs\\.org")
     org-confirm-babel-evaluate nil
+    org-journal-file-type 'monthly
+    org-journal-dir "~/org/journal"
     )
   )
 
