@@ -1,0 +1,38 @@
+* Examples of Sage code blocks
+
+** Versions
+#+begin_src emacs-lisp :exports both :results output
+  (princ "Emacs: ")
+  (princ emacs-version)
+  (princ "\n")
+  (princ "Org: ")
+  (princ (org-version))
+#+end_src
+
+#+RESULTS:
+: Emacs: 26.1
+: Org: 9.2.1
+
+#+begin_src sage :session foo :exports both
+  print version()
+#+end_src
+
+#+RESULTS:
+: SageMath version 8.6, Release Date: 2019-01-15
+
+** Blocks
+#+begin_src sage :session foo :exports both
+  F = FiniteField(17)
+  E = EllipticCurve(F, [0, 7])
+  E
+#+end_src
+
+#+RESULTS:
+: Elliptic Curve defined by y^2 = x^3 + 7 over Finite Field of size 17
+
+#+begin_src sage :session foo :file ec.png :exports both
+  E.plot()
+#+end_src
+
+#+RESULTS:
+[[file:ec.png]]

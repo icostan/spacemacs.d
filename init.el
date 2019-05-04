@@ -45,7 +45,7 @@ This function should only modify configuration layer settings."
       html
       (ruby :variables
         ruby-version-manager 'rvm
-        ruby-test-runner 'rspec
+        ruby-test-runner 'minitest
         )
       ruby-on-rails
       react
@@ -55,6 +55,7 @@ This function should only modify configuration layer settings."
       github
       games
       semantic
+      sage
       imenu-list
       command-log
       (wakatime :variables
@@ -542,7 +543,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
   '(ledger-reports
      (quote
-       (("monthly budget" "ledger --budget --monthly -f /Users/syca/Projects/ledger.d/2019.ledger reg Expenses")
+       (("equity" "ledger equity")
+         ("monthly budget" "ledger --budget --monthly -f /Users/syca/Projects/ledger.d/2019.ledger reg Expenses")
          ("monthly expenses" "ledger --monthly register Expenses")
          ("this month expenses" "ledger -p \"this month\" register Expenses")
          ("this month income" "ledger -p \"this month\" register Income")
